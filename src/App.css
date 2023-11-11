@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+:root {
+  font-family: poppins;
+}
+ * {
+  font-family: poppins;
+ }
+body {
+  margin: 0px;
+}
+.input_fields {
+  position: fixed;
+  bottom: 20px ;
+  align-items: baseline;
+  right: 20px;
+  display: grid;
+  grid-template-columns: 500px repeat(2, min-content);
+  grid-template-rows: auto;
+  gap: 30px;
+  
+}
+.input_fields > input {
+   outline: none;
+   border: 3px solid rgba(255, 255, 0, 0.603);
+    border-radius: 3px;
+   padding: 10px;
+   width: 300px;
+    justify-self: flex-end;
+    transition: .5s;
+}
+
+
+.input_fields > input:Hover, .input_fields > input:focus {
+  border-color: yellow;
+  width: 100%;
+
+}
+
+.input_fields > button {
+  border: none;
+  color: black;
+  height: 34px;
+  font-size: 20px;
+  background-color: white;
+  font-weight: 900;
+  transition: .7s;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.input_fields > button::before  {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 3px;
+  background-color: yellow;
+  content: "";
+  bottom: 0px;
+  transition: .5s;
+}
+.input_fields > button:hover::before {
+  height: 50%;
+  opacity: .6;
+}
+
+.input_fields > button:hover {
+  color: dodgerblue;
+}
+
+.friends .header {
+  font-size: 30px ;
+  padding: 0px 20px;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+}
+.friends .header::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 50px);
+  height: 5px;
+  border-radius: 3px;
+  background-color: yellow;
+  bottom: 8px;
+  right: 15px;
+  z-index: -1;
+  transition: .5s;
+}
+.header:hover::before {
+  width: calc(100% - 30px);
+  height: 50%;
+}
+.container .friends_list {
+  overflow: auto;
+  width: auto;
+  display: grid;
+  grid-auto-rows: 40px;
+  max-height: calc(100vh - 140px);
+  padding: 10px 40px;
+  margin: 0px;
+}
+.friends_list::-webkit-scrollbar {
+  width: 15px;
+}
+.friends_list::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+.friends_list li {
+  list-style-position: inside;
+}
