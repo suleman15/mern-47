@@ -1,0 +1,41 @@
+.container > .btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: grid;
+  grid-template-columns:  repeat(2, 200px);
+  gap: 10px;
+  grid-template-rows: 50px;
+}
+.btn button {
+  outline: none;
+  border: 3px solid white;
+  background-color: unset;
+  color: white;
+  font-weight: 900;
+}
+
+.timeLapHistory {
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+}
+.timeLapHistory::-webkit-scrollbar {
+  width: 15px;
+  cursor: pointer;
+}
+
+.timeLapHistory::-webkit-scrollbar-thumb {
+  background-color: white;
+  overflow: hidden;
+  border: 3px solid #242424;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lapItem {
+  margin: 10px;
+  border: 3px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
