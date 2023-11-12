@@ -13,9 +13,17 @@ let array = [53, 23, 23, 23, 234, 23];
 // };
 // console.log(customEvery(array, (item) => item >= 5));
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Array.prototype.customEvery = function (callback) {
+// const customEvery = (arr, every) => {
+//   arr.forEach((item) => {
+//     if (!every(item)) return false;
+//   });
+//   return true;
+// };
+// console.log(customEvery(array, (item) => item >= 5));
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Array.prototype.customEvery = function (every) {
 //   for (let i = 0; i < this.length; i++) {
-//     if (!callback(this[i])) {
+//     if (!every(this[i])) {
 //       return false;
 //     }
 //   }
@@ -39,9 +47,9 @@ let array = [53, 23, 23, 23, 234, 23];
 
 // console.log(customSome(array, (item) => item > 36));
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Array.prototype.customSome = function (callback) {
+// Array.prototype.customSome = function (some) {
 //   for (let i = 0; i < this.length; i++) {
-//     if (callback(this[i])) {
+//     if (some(this[i])) {
 //       return true;
 //     }
 //   }
