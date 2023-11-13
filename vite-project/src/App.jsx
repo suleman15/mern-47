@@ -13,8 +13,10 @@ function App() {
 
   return (
    <>
-  <div className="container flex justify-center bg-black w-[100%] h-screen items-center">
-  <form className="flex flex-col bg-[dodgerblue] p-10 rounded-md w-[600px]   " onSubmit={(e) => {
+  <div className="container flex justify-center bg-black min-w-[100%] h-screen items-center">
+   <div className="flex bg-[dodgerblue] rounded-lg overflow-hidden">
+   <img src="./contact.jpg" alt="contact.jpg" className="w-[700px]"/>
+  <form className="flex flex-col  p-10 rounded-md w-[600px]    " onSubmit={(e) => {
       e.preventDefault()
       Swal.fire("Submited", `user: ${userName}, email: ${userEmail}, message: ${textArea}`)
     }}>
@@ -28,6 +30,7 @@ function App() {
         <textarea className="min-h-[300px] p-3 rounded text-gray-500 focus:text-gray-900" placeholder='Message' id='userMessage' required value={textArea} onChange={e => setTextArea(e.target.value)}/>
       <input type="submit" value="Submit" className="hover:bg-[#325374]  hover:text-white bg-white my-3 p-3 rounded-md" />
     </form>
+   </div>
     
   </div>
    </>
