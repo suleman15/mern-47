@@ -5,6 +5,7 @@ import StopWatch from "../Pages/StopWatch";
 import Post from "../Pages/Post";
 import NotFound from "../Pages/404";
 import ParentPage from "../Pages/ParentPage";
+import Responsiveness from "../Pages/Resposiveness";
 
 let routes = createBrowserRouter([
 
@@ -27,6 +28,10 @@ let routes = createBrowserRouter([
     {
         path: "/post",
         element: <Post />
+    },
+    {
+        path: "/responsiveness",
+        element: <Responsiveness />
     },
     {
         path: "*",
